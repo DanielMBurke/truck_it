@@ -5,14 +5,18 @@
 <head>
 <link href="<c:url value="/css/style.css"/>" rel="stylesheet"
 	type="text/css" />
-<title>Reviews for Dummies</title>
+<title>Welcome to Truck-It!</title>
 </head>
 <body>
-		<h1>Greetings! Submit a review below!</h1>
-	<c:url var="forDummies" value="/img/forDummies.png" />
-	<div class="bookCover">
-		<img src="${forDummies}" />
+		<h1>Got a truck? Need a truck?</h1>
+	<c:url var="truck" value="/img/truck-itedit.gif" />
+	<div class="truckIcon">
+		<img src="${truck}" />
 	</div>
+	<div class="signUp">
+		<button><a class="signUp" href="signup">Sign Up!</a></button>
+	</div>
+	
 	<div class="submitReview">
 		<button><a class="submitReview" href="inputReview">Submit a review</a></button>
 	</div>
