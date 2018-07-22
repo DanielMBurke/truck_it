@@ -1,27 +1,17 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="pageTitle" value="Welcome to"/>
+<c:set var="pageHeader" value="Got a truck? Need a truck?"/>
+  
+<%@include file="common/header.jspf"%>
 
-<!DOCTYPE html>
-<html>
-<head>
-<link href="<c:url value="/css/style.css"/>" rel="stylesheet"
-	type="text/css" />
-<title>Welcome to Truck-It!</title>
-</head>
-<body>
-		<h1>Got a truck? Need a truck?</h1>
-	<c:url var="truck" value="/img/truck-itedit.gif" />
-	<div class="truckIcon">
-		<img src="${truck}" />
-	</div>
-	<div class="signUp">
+	<span class="signUp">
 		<button><a class="signUp" href="signup">Sign Up!</a></button>
-	</div>
-	
-	<div class="submitReview">
+	</span>
+	<span class="submitReview">
 		<button><a class="submitReview" href="inputReview">Submit a review</a></button>
-	</div>
+	</span>
 	<br>
-	<div class="currentReviews">Current Reviews:</div>
+	<h3 class="currentReviews">Current Reviews:</h3>
 	<div class= "reviewSet">
 	<c:forEach var="reviews" items="${reviews}">
 		<div class="reviewInfo">
@@ -29,10 +19,9 @@
 			<c:out value="${reviews.title}" />
 		</div>
 		<c:url var="starRating" value="/img/${reviews.rating}-star.png" />
-		<div class="starImg">
+		<div class="tireImg">
 			<img src="${starRating}" />
 		</div>
-		<span class=></span>
 		<c:out value="Submitted on: ${reviews.dateSubmitted}" />
 		<div>
 			<c:out value="By ${reviews.username}" />
@@ -44,6 +33,6 @@
 	</c:forEach>
 </div>
 
-</body>
-</html>
+<%@include file="common/footer.jspf"%>
+
 

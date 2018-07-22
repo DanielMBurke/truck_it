@@ -1,3 +1,6 @@
+*{
+	padding:.25rem;
+}
 .bookCover {
 	
 }
@@ -42,8 +45,8 @@ button {
 	font: bold 1rem Georgia, serif;
 }
 
-.starImg>img {
-	width: 25%;
+.tireImg>img {
+	width: 30%;
 	padding:.5rem;
 	opacity:.75;
 background: linear-gradient(to right, #c40101 0%,#c98484 17%,#ad5151 33%,#008a00 67%,#005700 83%,#002400 100%);}

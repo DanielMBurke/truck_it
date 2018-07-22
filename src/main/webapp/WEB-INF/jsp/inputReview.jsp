@@ -1,19 +1,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="pageTitle" value="Review "/>
+<c:set var="pageHeader" value="Tell us about your Truck-It experience!"/>
 
-<!DOCTYPE html>
-<html>
-	<head>
-<link href="<c:url value="/css/style.css"/>" rel="stylesheet"
-	type="text/css" />		<title>Review your experience! </title>
-	</head>
-	<body>
-	<c:url var="truck" value="/img/truck-itedit.gif" />
-	<div class="truckIcon">
-		<img src="${truck}" />
-	</div>
-		<h2>Leave a review!</h2>
+<%@include file="common/header.jspf"%>
+
 <c:url var="formAction" value="/inputReview" />
 <form method="POST" action="${formAction}">
+<div class="formInputGroup">
+		<label for="username">Truck-It username:(Required)</label> 
+		<input type="text" name="username" id="username" />
+	</div>
 	<div class="formInputGroup">
 		<label for="rating">Rating: 1 (Poor) - 4 (Stellar) </label> 
 		<select name="rating"	id="rating">
@@ -40,5 +36,6 @@
 <label for="submit"></label>
 	<input class="backButton" type="submit" value="Return to Home Screen" />
 </form>
-</html>
+
+<%@include file="common/footer.jspf"%>
 		

@@ -1,34 +1,34 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="pageTitle" value="Sign-up with"/>
+<c:set var="pageHeader" value="Sign up with"/>
 
-<!DOCTYPE html>
-<html>
-	<head>
-<link href="<c:url value="/css/style.css"/>" rel="stylesheet"
-	type="text/css" />		<title>Review your experience! </title>
-	</head>
-	<body>
-	<c:url var="truck" value="/img/truck-itedit.gif" />
-	<div class="truckIcon">
-		<img src="${truck}" />
-	</div>
-		<h2>Leave a review!</h2>
-<c:url var="formAction" value="/inputReview" />
+<%@include file="common/header.jspf"%>
+
+<c:url var="formAction" value="/signup" />
 <form method="POST" action="${formAction}">
+	
 	<div class="formInputGroup">
-		<label for="rating">Rating: 1 (Poor) - 4 (Stellar) </label> 
-		<select name="rating"	id="rating">
-			<option value="1">1 Tire</option>
-			<option value="2">2 Tires</option>
-			<option value="3">3 Tires</option>
-			<option value="4">4 Tires</option>
+		<label for="firstname">First name:</label> 
+		<input type="text" name="firstname" id="firstname" />
+	</div>
+	<div class="formInputGroup">
+		<label for="lastname">Last name:</label> 
+		<input type="text" name="lastname" id="lastname" />
+	</div>
+	<div class="formInputGroup">
+		<label for="username">Your Truck-It username:</label> 
+		<input type="text" name="username" id="username" />
+	</div>
+	<div class="formInputGroup">
+		<label for="usertype">How will you Truck-It?</label> 
+		<select name="usertype"	id="usertype">
+			<option value="driver">Driver-Only</option>
+			<option value="user">User-Only</option>
+			<option value="both">Both</option>
 		</select>
 	</div>
 	<div class="formInputGroup">
-		<label for="title">Title your review:</label> 
-		<input type="text" name="title" id="title" />
-	</div>
-	<div class="formInputGroup">
-		<label for="text">Comments:</label> 
+		<label for="text">Additonal info: (ie. Have a plow, trailer, tow hitch)</label> 
 		<input type="text" name="text" id="text" />
 	</div>
 	<label for= "submit"></label>
@@ -40,5 +40,5 @@
 <label for="submit"></label>
 	<input class="backButton" type="submit" value="Return to Home Screen" />
 </form>
-</html>
+<%@include file="common/footer.jspf"%>
 		

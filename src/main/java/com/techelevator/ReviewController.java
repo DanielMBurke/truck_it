@@ -31,7 +31,7 @@ public class ReviewController {
 	}
 	
 	@RequestMapping(path= {"/","/inputReview"}, method=RequestMethod.POST)
-	public String syncReview(@RequestParam String username, @RequestParam int rating, 
+	public String reviewTruck(@RequestParam String username, @RequestParam int rating, 
 			@ RequestParam String title, @RequestParam String text) {
 	LocalDateTime dateSubmitted = LocalDateTime.now();
 	Review review = new Review();
